@@ -42,6 +42,8 @@ function! dirgutter#define_signs()
         elseif symbol =~# 'M.*\| M'
             let sign.texthl = 'GitGutterChange'
             let sign.numhl = 'GitGutterChange'
+        elseif symbol =~# '??'
+            let sign.texthl = 'GitGutterChangeDelete'
         endif
         call sign_define(name, sign)
     endfor
